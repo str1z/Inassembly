@@ -1,0 +1,48 @@
+[
+  "div",
+  [
+    "nav",
+    { "class": "navbar navbar-expand navbar-light" },
+    ["Inassembly.initializers.link(this);", "a", { "class": "nav-brand mr-3", "to": "/app/home" }, ["img", { "src": "/logo.png", "height": "30", "alt": "Inassembly", "loading": "lazy" }]],
+    [
+      "div",
+      [
+        "ul",
+        { "class": "navbar-nav mr-auto", "style": "font-size: large;" },
+        ["li", { "class": "nav-item" }, ["Inassembly.initializers.link(this);", "a", { "class": "nav-link", "to": "/app/home" }, "Home"]],
+        ["li", { "class": "nav-item" }, ["Inassembly.initializers.link(this);", "a", { "class": "nav-link", "to": "/app/docs" }, "Docs"]],
+        ["li", { "class": "nav-item" }, ["Inassembly.initializers.link(this);", "a", { "class": "nav-link", "to": "/app/components" }, "Components"]],
+        ["li", { "class": "nav-item" }, ["Inassembly.initializers.link(this);", "a", { "class": "nav-link", "to": "/app/about" }, "About"]]
+      ]
+    ]
+  ],
+  [
+    "Inassembly.initializers.route(this);",
+    "div",
+    { "path": "/app/home", "class": "container" },
+    ["h1", { "class": "ml-4 font-weight-light mt-3", "style": "font-size: 60px;" }, "Inassembly"],
+    [
+      "div",
+      { "class": "row" },
+      [
+        "div",
+        { "class": "col-md" },
+        ["h3", { "class": "mt-5 font-weight-normal" }, "Build web applications just like in React, but without React"],
+        ["h3", { "class": "mt-5 ml-5 font-weight-normal" }, "Build fast responsive applications that only loads what the user cares."],
+        ["h3", { "class": "mt-5 ml-3 font-weight-normal" }, "Build an app that builds on top of itself."]
+      ],
+      ["div", { "class": "col-4 text-center" }]
+    ],
+    [
+      "div",
+      { "class": "row mt-5" },
+      [
+        "div",
+        { "class": "col" },
+        ["Inassembly.initializers.link(this);", "a", { "class": "btn btn-secondary btn-lg text-white mr-3", "to": "/app/docs/installation" }, "Installation"],
+        ["Inassembly.initializers.link(this);", "a", { "to": "/app/docs/getting-started" }, ["button", { "class": "btn btn-outline-success btn-lg" }, "Get started"]]
+      ]
+    ]
+  ],
+  ["Inassembly.initializers.route(this);", "div", { "path": "/app/docs" }, ["Inassembly.initializers.fetch(this);", "div", { "url": "/assemble/docs", "cache": "PAGE" }]]
+]
