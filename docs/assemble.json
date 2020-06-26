@@ -3,7 +3,7 @@
   [
     "nav",
     { "class": "navbar navbar-expand navbar-light" },
-    ["Inassembly.initializers.link(this);", "a", { "class": "nav-brand mr-3", "to": "/app/home" }, ["img", { "src": "/logo.png", "height": "30", "alt": "Inassembly", "loading": "lazy" }]],
+    ["Inassembly.initializers.link(this);", "a", { "class": "nav-brand mr-3", "to": "/app/home" }, ["img", { "src": "Inassembly/logo.png", "height": "30", "alt": "Inassembly", "loading": "lazy" }]],
     [
       "div",
       [
