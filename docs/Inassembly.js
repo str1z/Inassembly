@@ -10,7 +10,7 @@ Inassembly = {
       if (profile == "PAGE" && Inassembly.fetchCache[url]) return new Inassembly.Component(Inassembly.fetchCache[url]).mountDom(parentDom);
       else if (profile == "SESSION" && sessionStorage["fetchCache:" + url]) return new Inassembly.Component(JSON.parse(sessionStorage["fetchCache:" + url])).mountDom(parentDom);
       else if (profile == "LOCAL" && localStorage["fetchCache:" + url]) return new Inassembly.Component(JSON.parse(localStorage["fetchCache:" + url])).mountDom(parentDom);
-    Inassembly.fetch(url).then((data) => {
+    Inassembly.fetch("/Inassembly/" + url).then((data) => {
       if (profile == "NONE") {
         if (Inassembly.fetchCache[url]) delete Inassembly.fetchCache[url];
         else if (sessionStorage["fetchCache:" + url]) delete sessionStorage["fetchCache:" + url];
