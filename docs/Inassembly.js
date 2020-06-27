@@ -179,7 +179,7 @@ Inassembly = {
         let attributes = node.attributes;
         attributes.href = attributes.to;
         attributes.onclick =
-          " if (!(location.pathname).startsWith(this.getAttribute('to'))) {history.pushState({}, null, 'Inassembly/' + this.attributes.to.value); document.documentElement.scrollTop = 0 }; return false";
+          " if (!(location.pathname).startsWith(this.getAttribute('to'))) {history.pushState({}, null, '/Inassembly' + this.attributes.to.value); document.documentElement.scrollTop = 0 }; return false";
       };
     },
     route: (component) => {
@@ -187,7 +187,7 @@ Inassembly = {
         if (node.attributes.exact) console.log("exact exists");
         let childNodes = node.childNodes;
 
-        let verif = node.attributes.exactPath ? () => location.pathname == node.attributes.exactPath : () => location.pathname.startsWith("Inassembly/" + node.attributes.path);
+        let verif = node.attributes.exactPath ? () => location.pathname == node.attributes.exactPath : () => location.pathname.startsWith("/Inassembly" + node.attributes.path);
         if (verif()) {
           if (!node.childNodes[0]) node.childNodes = childNodes;
         } else if (node.childNodes[0]) node.childNodes = [];
