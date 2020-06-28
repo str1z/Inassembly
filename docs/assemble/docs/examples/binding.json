@@ -1,0 +1,18 @@
+[
+  "div",
+  ["h2", "Binding"],
+  ["p", "Binding the value an input field to some text node on the page..."],
+  [
+    "this.state = {message: \"Hello World\",size: 25,hue: 200,opacity: 100,};this.methods = {opacity: () => this.state.opacity / 100,};",
+    "div",
+    ["h4", { "style": "font-size: _size_px; color: hsl(_hue_, 100%, 50%); opacity: ((opacity));" }, "_message_"],
+    ["input", { "value": "_message_", "onkeyup": "this.self.state.message = this.value", "style": "display: block;" }],
+    ["br"],
+    ["h5", "size of _size_px"],
+    ["input", { "type": "range", "min": "0", "max": "50", "value": "_size_", "onchange": "this.self.state.size = this.value" }],
+    ["h5", "hue of _hue_°"],
+    ["input", { "type": "range", "min": "0", "max": "360", "value": "_hue_", "onchange": "this.self.state.hue = this.value" }],
+    ["h5", "opacity of _opacity_%"],
+    ["input", { "type": "range", "min": "0", "max": "100", "value": "_opacity_", "onchange": "this.self.state.opacity = this.value" }]
+  ]
+]
