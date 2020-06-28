@@ -11,6 +11,8 @@ Create applications that downloads the components as the user navigates.
 
 ```root/compiler/index``` is the file for the back-end compiler/parser.
 
+```root/docs/app.html``` is the entry point for docs.
+
 ## The compiler
 Node is required for the compiler and will compile/parse the file into a json format so it could be sent to the front-end.
 
