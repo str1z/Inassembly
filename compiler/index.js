@@ -54,7 +54,11 @@ const compile = (trace, current, data, caller, isComponent) => {
   } else
     for (let node of current.childNodes) {
       if (node.TextNode) {
-        let text = res.attr.notrim !== undefined ? node.rawText : node.rawText.trim();
+        let text;
+        if (res.attr.notrim !== undefined) {
+          delete res.attr.notrim;
+          text = node.rawText;
+        } else text = node.rawText.trim();
         if (text) res.inner.push(text);
       } else
         switch (node.tagName) {
