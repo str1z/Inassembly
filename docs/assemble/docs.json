@@ -1,0 +1,195 @@
+[
+  "div",
+  { "class": "row container-fluid mt-3 pr-0" },
+  [
+    "div",
+    { "class": "col-sm-4 col-md-3 col-lg-2 mb-2" },
+    [
+      "nav",
+      { "navbar": "", "class": "navbar-expand-sm navbar-light" },
+      [
+        "div",
+        { "class": "d-inline-flex w-100" },
+        ["input", { "class": "form-control mb-3", "type": "search", "placeholder": "Search", "aria-label": "Search" }],
+        [
+          "button",
+          {
+            "class": "navbar-toggler btn p-1 ml-3 h-100 border-0",
+            "type": "button",
+            "data-toggle": "collapse",
+            "data-target": "#docs-sidebar",
+            "aria-controls": "docs-sidebar",
+            "aria-expanded": "false",
+            "aria-label": "Toggle navigation"
+          },
+          ["span", { "class": "navbar-toggler-icon" }]
+        ]
+      ],
+      [
+        "div",
+        { "class": "collapse navbar-collapse mb-3", "id": "docs-sidebar" },
+        [
+          "div",
+          { "class": "navbar-nav mr-auto nav flex-column accordion w-100", "id": "accordionSideMenu" },
+          [
+            "div",
+            { "class": "card bg-white" },
+            [
+              "div",
+              { "class": "card-header p-0", "id": "headingFoundation" },
+              [
+                "h2",
+                { "class": "mb-0" },
+                [
+                  "button",
+                  {
+                    "class": "btn btn-light text-left nav-link btn-block pl-2",
+                    "style": "font-size: large; outline: none;",
+                    "type": "button",
+                    "data-toggle": "collapse",
+                    "data-target": "#collapseDocsFoundation",
+                    "aria-expanded": "false",
+                    "aria-controls": "collapseDocsFoundation"
+                  },
+                  "Foundation"
+                ]
+              ]
+            ],
+            [
+              "div",
+              { "id": "collapseDocsFoundation", "class": "collapse", "aria-labelledby": "headingFoundation", "data-parent": "#accordionSideMenu" },
+              [
+                "div",
+                { "class": "card-body p-1 pl-2" },
+                ["Inassembly.initializers.link(this);", "a", { "class": "nav-link", "to": "/app/docs/installation" }, "Installation"],
+                ["Inassembly.initializers.link(this);", "a", { "class": "nav-link", "to": "/app/docs/getting-started" }, "Getting started"],
+                ["Inassembly.initializers.link(this);", "a", { "class": "nav-link", "to": "/app/docs/components" }, "Components"],
+                ["Inassembly.initializers.link(this);", "a", { "class": "nav-link", "to": "/app/docs/super-components" }, "Super Components"],
+                ["Inassembly.initializers.link(this);", "a", { "class": "nav-link", "to": "/app/docs/initializers" }, "Initializers"],
+                ["Inassembly.initializers.link(this);", "a", { "class": "nav-link", "to": "/app/docs/dynamic-content" }, "Dynamic Content"],
+                ["Inassembly.initializers.link(this);", "a", { "class": "nav-link", "to": "/app/docs/parsing-options" }, "Parsing Options"]
+              ]
+            ]
+          ],
+          [
+            "div",
+            { "class": "card bg-white" },
+            [
+              "div",
+              { "class": "card-header p-0", "id": "headingComponents" },
+              [
+                "h2",
+                { "class": "mb-0 p-0" },
+                [
+                  "button",
+                  {
+                    "class": "btn btn-light text-left nav-link btn-block pl-2",
+                    "style": "font-size: large; outline: none;",
+                    "type": "button",
+                    "data-toggle": "collapse",
+                    "data-target": "#collapseDocsComponents",
+                    "aria-expanded": "false",
+                    "aria-controls": "collapseDocsComponents"
+                  },
+                  "Components"
+                ]
+              ]
+            ],
+            [
+              "div",
+              { "id": "collapseDocsComponents", "class": "collapse", "aria-labelledby": "headingComponents", "data-parent": "#accordionSideMenu" },
+              [
+                "div",
+                { "class": "card-body p-1 pl-2" },
+                ["Inassembly.initializers.link(this);", "a", { "class": "nav-link", "to": "/app/docs/store" }, "Store"],
+                ["Inassembly.initializers.link(this);", "a", { "class": "nav-link", "to": "/app/docs/link" }, "Link"],
+                ["Inassembly.initializers.link(this);", "a", { "class": "nav-link", "to": "/app/docs/route" }, "Route"],
+                ["Inassembly.initializers.link(this);", "a", { "class": "nav-link", "to": "/app/docs/fetch" }, "Fetch"]
+              ]
+            ]
+          ],
+          [
+            "div",
+            { "class": "card bg-white" },
+            [
+              "div",
+              { "class": "card-header p-0", "id": "headingExamples" },
+              [
+                "h2",
+                { "class": "mb-0 p-0" },
+                [
+                  "button",
+                  {
+                    "class": "btn btn-light text-left nav-link btn-block pl-2",
+                    "style": "font-size: large; outline: none;",
+                    "type": "button",
+                    "data-toggle": "collapse",
+                    "data-target": "#collapseDocsExamples",
+                    "aria-expanded": "false",
+                    "aria-controls": "collapseDocsExamples"
+                  },
+                  "Examples"
+                ]
+              ]
+            ],
+            [
+              "div",
+              { "id": "collapseDocsExamples", "class": "collapse", "aria-labelledby": "headingExamples", "data-parent": "#accordionSideMenu" },
+              [
+                "div",
+                { "class": "card-body p-1 pl-2" },
+                ["Inassembly.initializers.link(this);", "a", { "class": "nav-link", "to": "/app/docs/examples/binding" }, "Binding"],
+                ["Inassembly.initializers.link(this);", "a", { "class": "nav-link", "to": "/app/docs/link" }, "Link"],
+                ["Inassembly.initializers.link(this);", "a", { "class": "nav-link", "to": "/app/docs/route" }, "Route"],
+                ["Inassembly.initializers.link(this);", "a", { "class": "nav-link", "to": "/app/docs/fetch" }, "Fetch"]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  ],
+  [
+    "div",
+    { "class": "col-sm-8 col-md-9 col-lg-10 pb-5" },
+    ["Inassembly.initializers.route(this);", "div", { "path": "/app/docs/installation" }, ["Inassembly.initializers.fetch(this);", "div", { "url": "/assemble/docs/installation", "cache": "PAGE" }]],
+    [
+      "Inassembly.initializers.route(this);",
+      "div",
+      { "path": "/app/docs/getting-started" },
+      ["Inassembly.initializers.fetch(this);", "div", { "url": "/assemble/docs/getting-started", "cache": "PAGE" }]
+    ],
+    ["Inassembly.initializers.route(this);", "div", { "path": "/app/docs/components" }, ["Inassembly.initializers.fetch(this);", "div", { "url": "/assemble/docs/components", "cache": "PAGE" }]],
+    [
+      "Inassembly.initializers.route(this);",
+      "div",
+      { "path": "/app/docs/super-components" },
+      ["Inassembly.initializers.fetch(this);", "div", { "url": "/assemble/docs/super-components", "cache": "PAGE" }]
+    ],
+    ["Inassembly.initializers.route(this);", "div", { "path": "/app/docs/initializers" }, ["Inassembly.initializers.fetch(this);", "div", { "url": "/assemble/docs/initializers", "cache": "PAGE" }]],
+    [
+      "Inassembly.initializers.route(this);",
+      "div",
+      { "path": "/app/docs/dynamic-content" },
+      ["Inassembly.initializers.fetch(this);", "div", { "url": "/assemble/docs/dynamic-content", "cache": "PAGE" }]
+    ],
+    [
+      "Inassembly.initializers.route(this);",
+      "div",
+      { "path": "/app/docs/parsing-options" },
+      ["Inassembly.initializers.fetch(this);", "div", { "url": "/assemble/docs/parsing-options", "cache": "PAGE" }]
+    ],
+    ["Inassembly.initializers.route(this);", "div", { "path": "/app/docs/store" }, ["Inassembly.initializers.fetch(this);", "div", { "url": "/assemble/docs/store", "cache": "PAGE" }]],
+    ["Inassembly.initializers.route(this);", "div", { "path": "/app/docs/link" }, ["Inassembly.initializers.fetch(this);", "div", { "url": "/assemble/docs/link", "cache": "PAGE" }]],
+    ["Inassembly.initializers.route(this);", "div", { "path": "/app/docs/route" }, ["Inassembly.initializers.fetch(this);", "div", { "url": "/assemble/docs/route", "cache": "PAGE" }]],
+    ["Inassembly.initializers.route(this);", "div", { "path": "/app/docs/fetch" }, ["Inassembly.initializers.fetch(this);", "div", { "url": "/assemble/docs/fetch", "cache": "PAGE" }]],
+    [
+      "Inassembly.initializers.route(this);",
+      "div",
+      { "path": "/app/docs/examples/binding" },
+      ["Inassembly.initializers.fetch(this);", "div", { "url": "/assemble/docs/examples/binding", "cache": "PAGE" }]
+    ],
+    ["br", { "class": "mb-3" }],
+    ["span", { "class": "text-secondary" }, "Documentations for Inassembly version 0.0.1"]
+  ]
+]
