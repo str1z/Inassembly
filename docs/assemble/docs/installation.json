@@ -1,0 +1,15 @@
+[
+  "div",
+  ["h2", { "class": "text-secondary mb-3" }, "Installation"],
+  ["h4", "Node server side"],
+  ["this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));", "div", { "class": "my-4" }, ["pre", "npm install inassembly"]],
+  ["h4", { "class": "mt-3" }, "In app.html..."],
+  ["p", { "notrim": "" }, "include the following ", ["b", "cdn script"], " in the head."],
+  [
+    "this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));",
+    "div",
+    { "class": "my-4" },
+    ["pre", { "class": "html" }, "<script src=\"https://inassemblyjs.org/library/Inassembly.js\"></script>"]
+  ],
+  ["Inassembly.initializers.link(this);", "a", { "to": "/app/docs/getting-started" }, ["button", { "class": "btn btn-outline-success btn-lg" }, "Get started"]]
+]
