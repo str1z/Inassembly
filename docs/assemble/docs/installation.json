@@ -9,7 +9,7 @@
     "this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));",
     "div",
     { "class": "my-4" },
-    ["pre", { "class": "html" }, "<script src=\"https://inassemblyjs.org/library/Inassembly.js\"></script>"]
+    ["pre", { "class": "html" }, "<script src=\"https://cdn.jsdelivr.net/gh/STR1Z/Inassembly/inassembly.js\"></script>"]
   ],
   ["Inassembly.initializers.link(this);", "a", { "to": "/app/docs/getting-started" }, ["button", { "class": "btn btn-outline-success btn-lg" }, "Get started"]]
 ]

@@ -1,6 +1,6 @@
 {
   "name": "inassembly",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parser/Compiler for a relatively new library made for web applications.",
   "main": "index.js",
   "dependencies": {
@@ -14,5 +14,13 @@
     "inassembly"
   ],
   "author": "str1z",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/STR1Z/Inassembly.git"
+  },
+  "bugs": {
+    "url": "https://github.com/STR1Z/Inassembly/issues"
+  },
+  "homepage": "https://github.com/STR1Z/Inassembly#readme"
 }
