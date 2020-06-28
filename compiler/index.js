@@ -176,7 +176,7 @@ const v2Adapter = (object) => {
   return res;
 };
 
-exports = {
+module.exports = {
   devassemble: (path) => {
     let prev = Date.now();
     let res = v2Adapter(fromFile(path, {}, true));
