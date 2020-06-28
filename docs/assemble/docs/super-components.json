@@ -1,0 +1,29 @@
+[
+  "div",
+  ["h2", { "class": "text-secondary mb-3" }, "Super Components"],
+  ["p", "Super components are basically a component where they can inherit attributes, the innerHTML and the initializers from the caller component", ["code", " <use name></use>"]],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Making it Super"],
+  ["p", "Simple and straight forward yet again!"],
+  [
+    "this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));",
+    "div",
+    { "class": "my-4" },
+    ["pre", { "class": "html" }, "<span mySuperComponent>\r\n  It is time...\r\n  <super/>\r\n</span>"]
+  ],
+  ["p", "Make a super component by adding the super tag in it. The tag will get replaced by the innerHTML of the caller component on compile time."],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Using it..."],
+  ["p", "to save the day!"],
+  ["this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));", "div", { "class": "my-4" }, ["pre", { "class": "html" }, "<use mySuperComponent>for an upgrade</use>"]],
+  [
+    "p",
+    "As said earlier, the innerHTML of the caller",
+    ["code", " <use name></use> "],
+    "will replace the tag",
+    ["code", " <super></super> "],
+    "in the super component. So as a result, the output in HTML for\r\n    will be..."
+  ],
+  ["this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));", "div", { "class": "my-4" }, ["pre", { "class": "html" }, "<span>It is time... for an upgrade</span>"]],
+  ["Inassembly.initializers.link(this);", "a", { "to": "/app/docs/initializers" }, ["button", { "class": "btn btn-outline-secondary btn-lg" }, "Next"]]
+]

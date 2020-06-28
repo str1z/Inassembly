@@ -1,0 +1,44 @@
+[
+  "div",
+  ["h2", { "class": "text-secondary mb-3" }, "Components"],
+  [
+    "p",
+    "Inassembly is a quick way to create web apps in a component based fashion just like in React, but it is very quick to setup unlike React. The goal is to allow apps to load faster because it will\r\n    fetch from the backend the nescessary components as the user navigates. Not only that, it can also save the components in localStorage."
+  ],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Creating a component"],
+  ["p", "Simple and straight forward!"],
+  [
+    "this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));",
+    "div",
+    { "class": "my-4" },
+    ["pre", { "class": "html" }, "<span myFirstComponent>\r\n  Woohoo! That was so easy.\r\n</span>"]
+  ],
+  [
+    "p",
+    "The name of the component will always be the first attribute of the tag and no worries, it will get removed during compile time. Please note that",
+    ["b", { "notrim": "" }, " component declarations cannot be done inside a tag"],
+    ". Don't forget you can put whatever you want inside the component just like in HTML because this is HTML but under steorids!"
+  ],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Exporting a component"],
+  ["p", "This will allow you to later on import it."],
+  ["this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));", "div", { "class": "my-4" }, ["pre", { "class": "html" }, "<export myFirstComponent/>"]],
+  [
+    "p",
+    "The exported component will be the component referenced in the first attribute. Keep in mind that",
+    ["b", { "notrim": "" }, " component exportations cannot be done inside a tag and can only be done once"],
+    "."
+  ],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Importing a component"],
+  ["p", "This will allow you to use a component from a different file."],
+  ["this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));", "div", { "class": "my-4" }, ["pre", { "class": "html" }, "<import mySameComponent>./myFirstComponent.html</import>"]],
+  ["p", "Notice that the reference name can be changed depending on your needs. Make sure that the import path is relative to the node application entry point."],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Using a component"],
+  ["p", "Pretty self explanatory..."],
+  ["this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));", "div", { "class": "my-4" }, ["pre", { "class": "html" }, "<using mySameComponent/>"]],
+  ["p", "Right now, this might look a bit feature lacking, but dont worry, more spice is on the way. The", ["b", { "notrim": "" }, " reference name must be the one used locally in the file"], "."],
+  ["Inassembly.initializers.link(this);", "a", { "to": "/app/docs/super-components" }, ["button", { "class": "btn btn-outline-secondary btn-lg" }, "Next"]]
+]

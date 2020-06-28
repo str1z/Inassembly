@@ -1,0 +1,46 @@
+[
+  "div",
+  ["h2", { "class": "text-secondary" }, "Fetch"],
+  ["h5", { "class": "text-secondary mb-3" }, "Component"],
+  [
+    "p",
+    "Fetcher is a component that will fetch a component from the backend only if it is rendered. This is the component that fulfills the goal of Inassembly, loading only what the user wants to see.\r\n    Plus, it is super easy to work with it!"
+  ],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Creating a Fetch component"],
+  ["p", "This time, you don't need the", ["code", " super "], "tag in it."],
+  [
+    "this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));",
+    "div",
+    { "class": "my-4" },
+    ["pre", { "class": "html" }, "<div fetch>\r\n    <script init>\r\n        Inassembly.initializers.fetch(this);\r\n    </script>\r\n</div>"]
+  ],
+  ["p", ["code", "Inassembly.initializers.fetch "], "is an external initializer created to initialize your Fetch component. Just make sure you pass", ["code", " this "], "as a parameter."],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Using the Fetch component"],
+  ["p", "This will fetch the component and mount it as a child once rendered."],
+  ["this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));", "div", { "class": "my-4" }, ["pre", { "class": "html" }, "<use fetch url=\"/assemble/something\"/>"]],
+  ["p", "In this case, it will fetch the component each time when it is rendered which is not very healthy for the server. So..."],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Saving it is much better"],
+  ["p", "There are multiple options to choose from, but for now lets start with PAGE level saving because of the value of the", ["code", " save "], "attribute."],
+  ["this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));", "div", { "class": "my-4" }, ["pre", { "class": "html" }, "<use fetch url=\"/assemble/something\" cache=\"PAGE\"/>"]],
+  ["p", "The data fetched will stay as long as the user doesn't reload the page.", ["b", " Here are all the profiles."]],
+  [
+    "table",
+    { "class": "table my-4" },
+    ["thead", ["tr", ["th", { "scope": "col" }, "Profile"], ["th", { "scope": "col" }, "Description"]]],
+    [
+      "tbody",
+      ["tr", ["th", { "scope": "row" }, ["code", "NONE"]], ["td", "Doesn't save the component at all and deletes it if it is saved."]],
+      [
+        "tr",
+        ["th", { "scope": "row" }, ["code", "PAGE"]],
+        ["td", "Saves the component on the page level inside", ["code", " Inassembly.fetchCache"], ". Will get deleted if the user reloads the page."]
+      ],
+      ["tr", ["th", { "scope": "row" }, ["code", "SESSION"]], ["td", "Saves the component on the", ["code", " sessionStorage"], ", so it will get deleted if the user closes their browser."]],
+      ["tr", ["th", { "scope": "row" }, ["code", "LOCAL"]], ["td", "Saves the component on the", ["code", " localStorage"], ", so it will get deleted if the user clears their browsing data."]]
+    ]
+  ],
+  ["Inassembly.initializers.link(this);", "a", { "to": "/app/docs/super-components" }, ["button", { "class": "btn btn-outline-secondary btn-lg" }, "Next"]]
+]

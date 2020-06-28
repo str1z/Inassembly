@@ -1,0 +1,30 @@
+[
+  "div",
+  ["h2", { "class": "text-secondary mb-3" }, "Initializers"],
+  ["p", "Initializing your component is nowadays a core feature in modern web frameworks and obviously this framework has it too!"],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Creating an initializer"],
+  ["p", "with", ["code", " <script init></script>"], "."],
+  [
+    "this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));",
+    "div",
+    { "class": "my-4" },
+    ["pre", { "class": "html" }, "<span saySomething>\r\n    <script init>\r\n        console.log(\"Woohoo, I got initiated!\")\r\n    </script>\r\n</span>"]
+  ],
+  ["p", "Once this component is created, it is going to log \"Woohoo, I got initiated!\". The initiation will only happen in the components lifecylcle. Now, lets turn things up a notch!"],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Click counter"],
+  ["p", "We are going to make a click counter to demonstrate how component state works."],
+  [
+    "this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));",
+    "div",
+    { "class": "my-4" },
+    [
+      "pre",
+      { "class": "html" },
+      "<button clickCounter onclick=\"console.log(this.self.state.count++)\">\r\n    <script init>\r\n        this.state = {\r\n            count : 0\r\n        }\r\n    </script>\r\n    Click me!!!\r\n</button>"
+    ]
+  ],
+  ["p", "Each time the button gets clicked, the", ["code", " this.state.count "], "will increment by one. Right now, this is kind of lame, but stay tuned for more!"],
+  ["Inassembly.initializers.link(this);", "a", { "to": "/app/docs/dynamic-content" }, ["button", { "class": "btn btn-outline-secondary btn-lg" }, "Next"]]
+]

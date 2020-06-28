@@ -1,0 +1,28 @@
+[
+  "div",
+  ["h2", { "class": "text-secondary mb-3" }, "Getting started"],
+  ["h4", "Create root.html and then..."],
+  ["p", "type the following to create our Hello World app."],
+  ["this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));", "div", { "class": "my-4" }, ["pre", "<div root>\r\n    Greetings from Inassembly\r\n</div>\r\n\r\n<export root />"]],
+  ["h4", "In server.js"],
+  [
+    "p",
+    { "notrim": "" },
+    "We are going to use node and the Express framework for this tiny Hello World app. Express can be installed with ",
+    ["code", { "class": "text-monospace" }, "npm install express"]
+  ],
+  [
+    "this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));",
+    "div",
+    { "class": "my-4" },
+    [
+      "pre",
+      "const express = require(\"express\")\r\nconst assemble = require(\"inassembly\")\r\nconst app = express()\r\n\r\napp.get(\"/app\", (req,res) => {\r\n    res.sendFile(__dirname + \"/app.html\")\r\n})\r\n\r\napp.get(\"/assemble\", (req,res) => {\r\n    res.json(assemble(\"root\"))\r\n})\r\n\r\napp.listen(8080)"
+    ]
+  ],
+  ["h4", "Almost there!"],
+  ["p", "Type in the command line. Make sure that you are in the proper directory!"],
+  ["this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));", "div", { "class": "my-4" }, ["pre", "node server"]],
+  ["p", { "class": "mb-4" }, "And visit your page on a browser with", ["code", " localhost:8080/app"]],
+  ["Inassembly.initializers.link(this);", "a", { "to": "/app/docs/components" }, ["button", { "class": "btn btn-outline-secondary btn-lg" }, "Next"]]
+]

@@ -1,0 +1,49 @@
+[
+  "div",
+  ["h2", { "class": "text-secondary" }, "Route"],
+  ["h5", { "class": "text-secondary mb-3" }, "Component"],
+  [
+    "p",
+    { "notrim": "" },
+    "The route component allows to render multiple different views based on the path name. This is works best with the ",
+    ["Inassembly.initializers.link(this);", "a", { "to": "/app/docs/link" }, "Link"],
+    " component."
+  ],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Creating a Route component"],
+  ["p", "Make sure you have the", ["code", " super "], "tag in it."],
+  [
+    "this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));",
+    "div",
+    { "class": "my-4" },
+    ["pre", { "class": "html" }, "<div route>\r\n    <script init>\r\n        Inassembly.initializers.route(this);\r\n    </script>\r\n    <super />\r\n</div>"]
+  ],
+  ["p", ["code", "Inassembly.initializers.route "], "is an external initializer created to initialize your route component. Just make sure you pass", ["code", " this "], "as a parameter."],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Using the Route component"],
+  ["p", "The url in which the route will render needs to be the", ["b", " full path name "], "."],
+  [
+    "this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));",
+    "div",
+    { "class": "my-4" },
+    ["pre", { "class": "html" }, "<use route path=\"/full/paht/name\">\r\n    <h1>Hello, welcome to /full/path/name</h1>\r\n</use>"]
+  ],
+  [
+    "p",
+    "In this case, the route will render",
+    ["code", " Hello, welcome to /full/path/name "],
+    "if you are on the correct path name. Howerver, it will also render it if the beginning matches. So it will\r\n    also render it if the current path name is",
+    ["code", " /full/path/name/something-else-here"],
+    "."
+  ],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Using it exactly"],
+  ["p", "The main difference with the previous one is that now the path needs to match exactly."],
+  [
+    "this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));",
+    "div",
+    { "class": "my-4" },
+    ["pre", { "class": "html" }, "<use route path=\"/full/paht/name\">\r\n    <h1>Hello, you are exactly at /full/path/name</h1>\r\n</use>"]
+  ],
+  ["Inassembly.initializers.link(this);", "a", { "to": "/app/docs/fetcher" }, ["button", { "class": "btn btn-outline-secondary btn-lg" }, "Next"]]
+]

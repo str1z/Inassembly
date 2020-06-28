@@ -1,0 +1,33 @@
+[
+  "div",
+  ["h2", { "class": "text-secondary" }, "Link"],
+  ["h5", { "class": "text-secondary mb-3" }, "Component"],
+  [
+    "p",
+    { "notrim": "" },
+    "Link is component that works great with the ",
+    ["Inassembly.initializers.link(this);", "a", { "to": "/app/docs/route", "href": "" }, "Route"],
+    " component. Unlike a regular link, this link will not reload the page."
+  ],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Creating a Link component"],
+  ["p", "Make sure you have the", ["code", " super "], "tag in it."],
+  [
+    "this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));",
+    "div",
+    { "class": "my-4" },
+    ["pre", { "class": "html" }, "<a link>\r\n    <script init>\r\n        Inassembly.initializers.link(this);\r\n    </script>\r\n    <super />\r\n</a>"]
+  ],
+  ["p", ["code", "Inassembly.initializers.link "], "is an external initializer created to initialize your link component. Just make sure you pass", ["code", " this "], "as a parameter."],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Using a Link component."],
+  [
+    "p",
+    "The url where the link will go needs to be the",
+    ["b", " full path name "],
+    ["span", { "class": "text-secondary" }, "because the creator didn't bother to do it properly. The creator will be very happy if someone did it for him. Thank you very much."]
+  ],
+  ["this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));", "div", { "class": "my-4" }, ["pre", { "class": "html" }, "<use link to=\"/full/path/name\">Click me!</use>"]],
+  ["p", "The location that the link will direct will be the value of the", ["code", " to "], "attribute."],
+  ["Inassembly.initializers.link(this);", "a", { "to": "/app/docs/route" }, ["button", { "class": "btn btn-outline-secondary btn-lg" }, "Next"]]
+]

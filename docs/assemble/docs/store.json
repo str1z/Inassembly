@@ -1,0 +1,93 @@
+[
+  "div",
+  ["h2", { "class": "text-secondary" }, "Store"],
+  ["h5", { "class": "text-secondary mb-3" }, "Component"],
+  [
+    "p",
+    "Store is a component that can save a component into",
+    ["code", " Inassembly.data.store "],
+    "or become a component saved in it. Store is extremely important for fast loading websites because the\r\n    Inassembly compiler will pact a component into the JSON as many times as its repeated. The Store has been solely created to fight this problem."
+  ],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Creating a Store component"],
+  ["p", "Make sure you have the", ["code", " super "], "tag in it."],
+  [
+    "this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));",
+    "div",
+    { "class": "my-4" },
+    ["pre", { "class": "html" }, "<div store>\r\n    <script init>\r\n        Inassembly.initializers.store(this);\r\n    </script>\r\n    <super />\r\n</div>"]
+  ],
+  [
+    "p",
+    ["code", "Inassembly.initializers.store "],
+    "is an external initializer created to initialize your store component. Just make sure you pass",
+    ["code", " this "],
+    "as a parameter. External\r\n    initializers are used because some component meant to be repeated can't be to big, therefore external initializers must be used to significantly reduce the size of the component."
+  ],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Saving into the Store"],
+  ["p", "This will save the", ["b", " first element or component "], "inside the", ["code", " use "], "tag on the client side."],
+  [
+    "this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));",
+    "div",
+    { "class": "my-4" },
+    ["pre", { "class": "html" }, "<use store saveAs=\"myH1\">\r\n    <h1>Hello World</h1>\r\n</use>"]
+  ],
+  [
+    "p",
+    "The h1 element will be stored in",
+    ["code", " Inassembly.data.store.myH1 "],
+    "so you can later as many times as you want without bloating your application. Howerver, it is pretty meaningless to\r\n    save elements or components that are small like the one in the example."
+  ],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Loading from the Store"],
+  ["p", "This will allow you to load a component from", ["code", " Inassembly.data.store.myH1 "], "."],
+  ["this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));", "div", { "class": "my-4" }, ["pre", { "class": "html" }, "<use store loadFrom=\"myH1\"/>"]],
+  ["p", ["code", "<h1>Hello World</h1> "], "will be loaded during runtime on the client side."],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Saving a Super Component"],
+  ["p", "First, we will need to create a super component, then place it in using the", ["code", " use "], "with", ["code", " <div class=\"super\"></div> "], "inside the", ["code", " use "], "tag."],
+  [
+    "this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));",
+    "div",
+    { "class": "my-4" },
+    [
+      "pre",
+      { "class": "html" },
+      "<!-- super component declaration -->\r\n<h1 someTitle>\r\n    <super/>\r\n</h1>\r\n\r\n<!-- saving the declared super component -->\r\n<use store saveAs=\"someTitle\">\r\n    <use someTitle>\r\n        <div class=\"super\"></div>\r\n    </use>\r\n</use>"
+    ]
+  ],
+  [
+    "p",
+    "The",
+    ["code", " <div class=\"super\"></div> "],
+    "is for channelling the content from when it is used with the store to the",
+    ["code", " super "],
+    "tag of",
+    ["span", { "class": "text-monospace" }, " someTitle "],
+    "component."
+  ],
+  ["hr"],
+  ["h4", { "class": "mt-3" }, "Loading a Super Component"],
+  ["p", "Nothing has really changed, it is pretty much the same principle."],
+  [
+    "this.onMount = (dom) => hljs.highlightBlock(dom.querySelector(\"pre\"));",
+    "div",
+    { "class": "my-4" },
+    ["pre", { "class": "html" }, "<use store loadFrom=\"someTitle\" style=\"color: grey;\">\r\n    Hello World\r\n</use>"]
+  ],
+  [
+    "p",
+    { "class": "mb-4" },
+    "What is actually happening behind the scenes is that the content inside of",
+    ["code", " <use store ></use> "],
+    "will get added into",
+    ["code", " <div class=\"super\"></div> "],
+    "during runtime which is\r\n    at the same location of the",
+    ["code", " super "],
+    "tag in the super component. The attributes will also get inherited, but a bit differently this time. Only the saved component will inherit it,\r\n    not the parent of",
+    ["code", " <div class=\"super\"></div> "],
+    "unlike its default behavior without the Store. Unfortunetly, initializers can't be inherited."
+  ],
+  ["Inassembly.initializers.link(this);", "a", { "to": "/app/docs/link" }, ["button", { "class": "btn btn-outline-secondary btn-lg" }, "Next"]]
+]
